@@ -1,25 +1,44 @@
+Clonning source code from repo
 ```
-conda create --prefix ./env python=3.7 y
+git clone <https://github.com/Avnish327030/aiops_projects.git>
 ```
 
-To know where the remote branch location is,
+To add files into staging or to allow file to be tracked by git
 ```
-$ git remote -v
-origin  https://github.com/kiran1384/aiops_test.git (fetch)
-origin  https://github.com/kiran1384/aiops_test.git (push) 
+git add <file_name>
 ```
-To remove file from staging
+Replace "you@example.com" with github email id
+'''`
+ git config --global user.email "you@example.com"
+ ```
+
+Replace "Your Name" with user name of github
 ```
-$ git rm --cached main.py
-rm 'main.py'
+git config --global user.name "Your Name"
 ```
-To know the branch name
+To perform commit
+```
+git commit -m "Write your message about your changes"
+```
+Rename current branch to main branch
+```
+git branch -M main
+```
+To list the branch name
 ```
 git branch
-* main
 ```
+To check remote branch url and variable name
+```
+git remote -v
+```
+To send changes to remote branch
 
-To rename a branch
 ```
-git brnch -M main
+git push <remote_branch_variable> <branch_name>
+```
+To remove file from staging area
+
+```
+git rm --cached <file_name>
 ```
